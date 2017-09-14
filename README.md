@@ -1,5 +1,5 @@
 # CodeIT_Task
-Описание файлов.
+###Описание файлов.
 
 db.sql - экспортированная БД.
 
@@ -8,8 +8,9 @@ config.php - содержит данные для подключения к БД
 routes.php - содержит доступные адреса для запросов.
 
 index.php - точка входа.
-
-
+ 
+ ---
+ 
 core/database/connection.php - подключение БД, возвращает обьект PDO.
 
 core/database/Query.php - класс для запросов в БД.
@@ -22,6 +23,7 @@ core/User.php - класс для работы с пользовательски
 
 core/Validator.php - класс для валидации данных .
 
+---
 
 controllers/index.php - контроллер для формы авторизации, logout-a и "Личного кабинета", подключает -> views/index.view.php.
 
@@ -31,13 +33,15 @@ controllers/signIn.php - контроллер для авторизации.
 
 controllers/signUp.php - контроллер для регистрации.
 
+---
 
 public/registrationValidator.js -валидация при регистрации.
 
 public/loginValidator.js - валидация при авторизации.
 
+---
 
-Процесс регистрации.
+###Процесс регистрации.
 
 uri = 'registration' -> index.php -> запрос к Router(возвращает controllers/registration.php) -> заполнение формы -> js валидация.
 
@@ -45,8 +49,9 @@ uri = 'registration' -> index.php -> запрос к Router(возвращает
 
 .}else{->['GET'] error -> uri = 'registration' -> Вывод ошибки}.
 
+---
 
-Процесс авторизации.
+###Процесс авторизации.
 
 uri = '' -> index.php -> запрос к Router(возвращает controllers/index.php) -> заполнение формы -> js валидация.
 
